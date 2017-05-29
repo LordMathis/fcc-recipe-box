@@ -1,0 +1,17 @@
+.RecipeBox {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.Recipe-footer {
+  padding-top: 1em;
+}
+
+.RecipeBox-AddBtn {
+  margin-left: 15px;
+}
+
+.panel-heading {
+  text-align: center;
+  font-size: 1.2em;
+}
