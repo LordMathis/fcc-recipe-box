@@ -4,8 +4,11 @@ import './RecipeBox.css';
 
 const Recipe = (props) => (
   <Panel header={props.name}>
-    {props.ingredients}
-
+    <ul>
+      {props.ingredients.map((ingredient) => {
+        return <li key={ingredient}>{ingredient}</li>
+      })}
+    </ul>
     <div className="Recipe-footer">
       <ButtonToolbar>
         <Button bsStyle="primary" onClick={() => props.onEdit(props.id)}>Edit</Button>

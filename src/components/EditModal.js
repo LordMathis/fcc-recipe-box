@@ -24,7 +24,7 @@ const EditModal = (props) => (
           <FormGroup controlId="formControlsTextarea">
             <ControlLabel>Ingredients</ControlLabel>
             <FormControl componentClass="textarea"
-              value={props.editedRecipe.ingredients}
+              value={props.editedRecipe.ingredients.join(', ')}
               onChange={props.onChangeIng}
             />
           </FormGroup>
@@ -44,7 +44,7 @@ const EditModal = (props) => (
 EditModal.defaultProps = {
   editedRecipe: {
     name: '',
-    ingredients: '',
+    ingredients: [],
   }
 };
 

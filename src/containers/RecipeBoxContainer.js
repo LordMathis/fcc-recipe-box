@@ -36,7 +36,7 @@ const RecipeBoxContainer = class RecipeBoxContainer extends Component {
       showModal: false,
       editedRecipe: {
         name: '',
-        ingredients: '',
+        ingredients: [],
       },
       editedIndex: -1,
     });
@@ -56,7 +56,7 @@ const RecipeBoxContainer = class RecipeBoxContainer extends Component {
       recipes: recipes,
       editedRecipe: {
         name: '',
-        ingredients: '',
+        ingredients: [],
       },
       editedIndex: -1
     }, () => this.persist());
@@ -73,7 +73,7 @@ const RecipeBoxContainer = class RecipeBoxContainer extends Component {
   }
 
   handleChangeIng = (event) => {
-    let value = event.target.value;
+    let value = event.target.value.split(', ');
     let newRecipe = this.state.editedRecipe;
     newRecipe.ingredients = value;
 
@@ -86,7 +86,7 @@ const RecipeBoxContainer = class RecipeBoxContainer extends Component {
     this.setState({
       editedRecipe: {
         name: '',
-        ingredients: '',
+        ingredients: [],
       },
       editedIndex: this.state.recipes.length,
       showModal: true,
@@ -94,10 +94,8 @@ const RecipeBoxContainer = class RecipeBoxContainer extends Component {
   }
 
   handleDelete = (i) => {
-    console.log(i);
     let recipes = this.state.recipes;
     recipes.splice(i,1);
-    console.log(JSON.stringify(recipes));
 
     this.setState({
       recipes: recipes
