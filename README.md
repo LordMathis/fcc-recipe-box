@@ -1,8 +1,10 @@
 # FreeCodeCamp Recipe Box
 
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 ## Live Demo:
 
-`//TODO`
+https://fccrcpbox.herokuapp.com/
 
 ## Usage:
 * Clone the repository
