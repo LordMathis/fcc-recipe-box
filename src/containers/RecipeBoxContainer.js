@@ -99,7 +99,7 @@ const RecipeBoxContainer = class RecipeBoxContainer extends Component {
 
     this.setState({
       recipes: recipes
-    });
+    }, () => this.persist());
   }
 
   persist = () => {
