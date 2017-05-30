@@ -35,7 +35,7 @@ class RecipeBox extends Component {
 
       return (
         <div className='RecipeBox'>
-          <Col xs={6} xsOffset={3}>
+          <Col sm={6} smOffset={3} xs={12}>
             {recipes}
           <Button className="RecipeBox-AddBtn" bsStyle="success" onClick={() => this.props.onAddRecipe()}>Add Recipe</Button>
           </Col>
